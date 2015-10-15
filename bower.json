@@ -1,0 +1,16 @@
+{
+  "name": "Swisscom-Workshop",
+  "version": "0.0.1",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/bower_components"
+  ],
+  "dependencies": {
+    "angular": "*"
+  },
+  "resolutions": {
+    "angular": "*"
+  }
+}

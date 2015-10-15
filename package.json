@@ -1,0 +1,15 @@
+{
+  "name": "Swisscom-Workshop",
+  "version": "0.0.1",
+  "description": "Frontend Technology Workshop for Swisscom",
+  "repository": "https://bitbucket.org/youengineering/swisscom-workshop-2015.git",
+  "main": "Gruntfile.js",
+  "author": "youEngineering AG",
+  "devDependencies": {
+    "express": "*",
+    "grunt": "*",
+    "grunt-bower-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-sass": "*"
+  }
+}

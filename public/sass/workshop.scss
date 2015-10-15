@@ -1,0 +1,37 @@
+$color-black: #000000;
+$color-white: #FFFFFF;
+$color-darkblue: #001155;
+
+body {
+  margin: 0;
+  background-image: url('images/background.jpg');
+  background-repeat: no-repeat;
+  color: $color-black;
+  font-family: 'TheSaB5', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.scs-main-container {
+  width: 980px;
+  margin: 0 auto;
+
+  .scs-main-header, .scs-main-footer {
+    background-color: $color-darkblue;
+    color: $color-white;
+    padding: 15px 20px;
+  }
+
+  .scs-main-body {
+    margin: 30px 0;
+
+    .scs-heading {
+      &:after {
+        content: " ;-)";
+      }
+    }
+  }
+
+  .scs-main-footer {
+
+  }
+}

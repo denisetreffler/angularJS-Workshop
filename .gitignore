@@ -1,0 +1,20 @@
+### Intellij ###
+.idea/compiler.xml
+.idea/misc.xml
+.idea/copyright/*
+.idea/inspectionProfiles/*
+.idea/vcs.xml
+
+### NodeJS ###
+node_modules
+
+### Bower ###
+bower_components
+
+### SASS ###
+.sass-cache
+
+### Custom ###
+public/vendor.js
+public/workshop.js
+public/workshop.css
