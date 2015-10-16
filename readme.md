@@ -1,5 +1,14 @@
 # Vorbereitung vor Workshop
-1. Projekt in IntelliJ auschecken
-2. Shell Script für Initialisierung starten mittels `sh go.sh` im Hauptverzeichnis
-5. Node Applikation starten mittels `node server.js`
-4. Im Browser auf `http://localhost:3000` gehen und prüfen ob der Titel "Das war's schon ;-)" (inkl. Smiley) angezeigt wird. Falls ja, war's das. Ansonsten kannst du dich gerne bei uns melden.
+Herzlich Willkommen im youEngineering Workshop
+Auf dieser VM sollten Sie alle wichtigen Installationen finden um den Workshop erfolreich zu absolvieren.
+Auf dem Dektop befinden sich Icons für folgende applikationen:
+    IntelliJIDEA:    Startet die IntelliJ Entwicklungsumgebung
+    Chrome:          Webbrowser um den Webserver per http://localhost:3000 zu erreichen
+    Terminal:        Startet ein Terminal im Projectordner um grunt auszuführen
+
+Vorgehen:
+1. IntelliJ Starten
+2. NodeJS Server mit Run im IntelliJ starten
+3. Chrome starten und auf http//localhost:3000 gehen
+4. Terminal öffnen
+5. Code überprüfen mit dem Befehl grunt im Terminal
