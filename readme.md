@@ -6,9 +6,9 @@ Auf dem Dektop befinden sich Icons für folgende applikationen:
 * IntelliJIDEA
     * Startet die IntelliJ Entwicklungsumgebung
 * Chrome
-+Webbrowser um den Webserver per http://localhost:3000 zu erreichen   
+    * Webbrowser um den Webserver per http://localhost:3000 zu erreichen   
 * Terminal
-+ Startet ein Terminal im Projectordner um grunt auszuführen
+    * Startet ein Terminal im Projectordner um grunt auszuführen
 
 ###Vorgehen:
 1. IntelliJ Starten
