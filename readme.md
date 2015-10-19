@@ -1,5 +1,5 @@
 # Vorbereitung für den Workshop
-Herzlich Willkommen im youEngineering Workshop
+####Herzlich Willkommen im youEngineering Workshop
 Auf dieser VM sollten Sie alle wichtigen Installationen finden um den Workshop erfolreich zu absolvieren.
 Auf dem Dektop befinden sich Icons für folgende applikationen:
     IntelliJIDEA:    Startet die IntelliJ Entwicklungsumgebung
