@@ -2,8 +2,8 @@
 
 var workshopApp = angular.module('ec4uWorkshop', [
     "ui.router",
-    //"modules.login",
-    //"modules.home"
+    "modules.login",
+    "modules.home"
 ]);
 
 workshopApp.config(
