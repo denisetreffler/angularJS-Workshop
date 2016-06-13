@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    'public/workshop.css': 'public/sass/workshop.scss'
+                    'public/workshop.css': 'src/sass/workshop.scss'
                 }
             }
         },
@@ -20,8 +20,19 @@ module.exports = function(grunt) {
                     beautify: true
                 },
                 files: {
-                    'public/workshop.js': ['src/app.js']
+                    "public/workshop.js": [
+                        'src/app.js',
+                        'src/modules/**/*.js'
+                    ]
                 }
+            }
+        },
+        copy: {
+            files: {
+                cwd: 'src/modules',
+                src: '**/*.html',
+                dest: 'public/partials',
+                expand: true
             }
         },
         bower_concat: {
@@ -37,7 +48,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-bower-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['sass:all', 'uglify:all', 'bower_concat:all']);
-    grunt.registerTask('dist', ['sass:all', 'uglify:all', 'bower_concat:all']);
+    grunt.registerTask('default', ['sass:all', 'uglify:all', 'copy', 'bower_concat:all']);
+    grunt.registerTask('dist', ['sass:all', 'uglify:all', 'copy', 'bower_concat:all']);
 };

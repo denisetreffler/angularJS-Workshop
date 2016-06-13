@@ -1,7 +1,10 @@
 'use strict';
 
-var workshopApp = angular.module('ec4uWorkshop',
-    ["ui.router"]);
+var workshopApp = angular.module('ec4uWorkshop', [
+    "ui.router",
+    //"modules.login",
+    //"modules.home"
+]);
 
 workshopApp.config(
         function($stateProvider, $urlRouterProvider){
@@ -10,15 +13,15 @@ workshopApp.config(
                 $stateProvider
                     .state('home', {
                         url: '/home',
-                        templateUrl: 'partials/partial-home.html'
+                        templateUrl: 'partials/home/home.html'
                     })
                     .state('login', {
                         url: '/login',
-                        templateUrl: 'partials/partial-login.html'
+                        templateUrl: 'partials/login/login.html'
                     })
                     .state('about', {
                         url: '/about',
-                        templateUrl: 'partials/partial-about.html'
+                        templateUrl: 'partials/about/about.html'
                     });
         });
 
