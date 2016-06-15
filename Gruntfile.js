@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
 
+    // config
     grunt.initConfig({
         sass: {
             all: {
@@ -45,6 +46,7 @@ module.exports = function(grunt) {
         }
     });
 
+    // import
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-bower-concat');
