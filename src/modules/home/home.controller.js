@@ -1,6 +1,6 @@
 "use strict";
 
-var homeModule = angular.module("modules.home", ["ec4uWorkshop"]);
+var homeModule = angular.module("modules.home", []);
 
 homeModule.controller("homeController", function($scope) {
         $scope.title = "Home";
