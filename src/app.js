@@ -28,6 +28,7 @@ workshopApp.config(
         });
 
 workshopApp.controller('mainController',
-        function($scope){
+        function($scope, $state){
             $scope.welcomeTitle = "Welcome";
+            $scope.currentState = $state;
         });
