@@ -11,21 +11,24 @@ workshopApp.config(
                 $urlRouterProvider.otherwise('home');
 
                 $stateProvider
-                    .state('home', {
+                    .state('Home', {
                         url: '/home',
-                        templateUrl: 'partials/home/home.html'
+                        templateUrl: 'partials/home/home.html',
+                        controller: 'homeController'
                     })
-                    .state('login', {
+                    .state('Login', {
                         url: '/login',
-                        templateUrl: 'partials/login/login.html'
+                        templateUrl: 'partials/login/login.html',
+                        controller: 'loginController'
                     })
-                    .state('about', {
+                    .state('About', {
                         url: '/about',
                         templateUrl: 'partials/about/about.html'
                     });
         });
 
 workshopApp.controller('mainController',
-        function($scope){
-                $scope.welcomeTitle = "Welcome";
+        function($scope, $state){
+            $scope.welcomeTitle = "Welcome";
+            $scope.currentState = $state;
         });
