@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    'public/workshop.css': 'src/sass/workshop.scss'
+                    'public/styles/workshop.css': 'src/sass/workshop.scss'
                 }
             }
         },
@@ -36,6 +36,15 @@ module.exports = function(grunt) {
                 expand: true
             }
         },
+        concat: {
+            options: {
+                separator: ';'
+            },
+            all: {
+                src: 'src/bower_components/**/*.min.css',
+                dest: 'public/styles/styles.css'
+            }
+        },
         bower_concat: {
             all: {
                 dest: 'public/vendor.js',
@@ -51,7 +60,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-bower-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.registerTask('default', ['sass:all', 'uglify:all', 'copy', 'bower_concat:all']);
-    grunt.registerTask('dist', ['sass:all', 'uglify:all', 'copy', 'bower_concat:all']);
+    grunt.registerTask('default', ['sass:all', 'uglify:all', 'copy', 'concat:all', 'bower_concat:all']);
+    grunt.registerTask('dist', ['sass:all', 'uglify:all', 'copy', 'concat:all', 'bower_concat:all']);
 };

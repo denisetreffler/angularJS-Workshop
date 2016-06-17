@@ -4,29 +4,32 @@
     <head>
         <title>ec4u Workshop</title>
         <meta charset="utf-8"/>
-        <link href="workshop.css" rel="stylesheet" type="text/css" media="screen, print">
+        <link href="styles/workshop.css" rel="stylesheet" type="text/css" media="screen, print">
+        <link rel="stylesheet" href="styles/styles.css" type="text/css">
     </head>
 
     <body ng-controller="mainController">
         <div class="scs-main-container">
             <header class="scs-main-header">
-                ec4u Workshop - {{welcomeTitle}}
+                <span>ec4u Workshop - {{welcomeTitle}}</span>
+                <span>
+                    <nav class="navbar" role="navigation">
+                        <ul class="nav nav-pills">
+                            <li class="nav-li"><a ui-sref="Home">Home</a></li>
+                            <li class="nav-li"><a ui-sref="Login">Login</a></li>
+                            <li class="nav-li"><a ui-sref="About">About</a></li>
+                        </ul>
+                    </nav>
+                </span>
             </header>
 
             <main class="scs-main-body">
                 <div>
                     Current Page: {{currentState.current.name}}
                 </div>
-                <nav class="navbar" role="navigation">
-                    <ul class="nav">
-                        <li class="nav-li"><a ui-sref="Home">Home</a></li>
-                        <li class="nav-li"><a ui-sref="Login">Login</a></li>
-                        <li class="nav-li"><a ui-sref="About">About</a></li>
-                    </ul>
-                </nav>
 
                 <!-- MAIN CONTENT -->
-                <div class="container">
+                <div class="partial-container">
                     <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
                     <div ui-view></div>
                 </div>

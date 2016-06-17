@@ -4,7 +4,7 @@ $color-darkblue: #001155;
 
 body {
   margin: 0;
-  background-image: url('images/background.jpg');
+  background-image: url('../images/background.jpg');
   background-repeat: no-repeat;
   color: $color-black;
   font-family: 'TheSaB5', 'Trebuchet MS', Arial, Helvetica, sans-serif;
@@ -22,17 +22,17 @@ body {
   }
 
   .navbar {
-    height: 20px;
-    float: right;
+    //height: 20px;
+    //float: right;
 
     .nav {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      background-color: #dddddd;
+      //list-style-type: none;
+      //margin: 0;
+      //padding: 0;
+      //background-color: #dddddd;
 
       .nav-li {
-        float: left;
+        /*float: left;
         display: inline;
 
         a, a:visited, a:link {
@@ -49,7 +49,7 @@ body {
           padding: 8px;
           background-color: #686868;
           color: #f6f6f6;
-        }
+        }*/
       }
     }
   }
@@ -58,9 +58,11 @@ body {
     margin: 30px 0;
     min-height: 100px;
 
-    .scs-heading {
-      &:after {
-        content: " ;-)";
+    .partial-container {
+      width: 980px;
+
+      .login-form {
+        width: 200px;
       }
     }
   }
