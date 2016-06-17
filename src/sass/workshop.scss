@@ -19,6 +19,15 @@ body {
     background-color: $color-darkblue;
     color: $color-white;
     padding: 15px 20px;
+    height: 70px;
+
+    .header-title {
+      float: left;
+    }
+
+    .header-nav {
+      float:  right;
+    }
   }
 
   .navbar {
