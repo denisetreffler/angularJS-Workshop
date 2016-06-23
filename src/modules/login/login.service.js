@@ -2,18 +2,18 @@
 
 function LoginService() {
 
-    var model = {
-        username: "gClooney",
-        firstname: "George",
-        lastname: "Clooney",
-        password: "password",
-        isLoggedIn: isLoggedInFunc()
+    return {
+        getUser: getUser
     };
 
-    return model;
-
-    function isLoggedInFunc() {
-        return true;
+    function getUser() {
+        return {
+            username: "gClooney",
+            firstname: "George",
+            lastname: "Clooney",
+            password: "password",
+            id: "0"
+        }
     }
 
 };

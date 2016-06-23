@@ -13,7 +13,8 @@ workshopApp.config(
                     .state('Login', {
                         url: '/login',
                         templateUrl: 'partials/login/login.html',
-                        controller: 'loginController'
+                        controller: 'loginController',
+                        controllerAs: "ctrl"
                     })
                     .state('About', {
                         url: '/about',

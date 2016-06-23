@@ -4,7 +4,11 @@ var loginModule = angular.module("modules.login", []);
 
 loginModule.controller("loginController",
     function($scope, LoginService) {
-        $scope.vm = LoginService;
+        
+        var vm = this;
+
+        vm.loggedIn = true;
+        vm.loginData = LoginService.getUser();
     }
 );
 
