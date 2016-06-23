@@ -23,6 +23,7 @@ module.exports = function(grunt) {
                 files: {
                     "public/workshop.js": [
                         'src/app.js',
+                        'src/app.routes.js',
                         'src/modules/**/*.js'
                     ]
                 }
