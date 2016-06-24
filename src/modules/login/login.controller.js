@@ -8,8 +8,10 @@ loginModule.controller("loginController",
         var vm = this;
 
         vm.loggedIn = true;
+        vm.dataLoading = false;
         vm.loginData = LoginService.getUser();
         vm.logout = logout;
+        vm.login = login;
     }
 );
 
@@ -19,4 +21,10 @@ loginModule.factory("LoginService",
 
 function logout() {
     this.loggedIn = false;
+    this.dataLoading = false;
+};
+
+function login() {
+    this.dataLoading = true;
+    this.loggedIn = true;
 };
