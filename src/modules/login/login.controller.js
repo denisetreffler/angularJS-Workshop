@@ -10,13 +10,13 @@ loginModule.controller("loginController",
         vm.loggedIn = true;
         vm.loginData = LoginService.getUser();
         vm.logout = logout;
+
+        function logout() {
+            vm.loggedIn = false;
+        };
     }
 );
 
 loginModule.factory("LoginService",
     LoginService
 );
-
-function logout() {
-    this.loggedIn = false;
-};
