@@ -3,7 +3,7 @@
 var loginModule = angular.module("modules.login", []);
 
 loginModule.controller("loginController",
-    function($scope, LoginService) {
+    function($scope, LoginService, $timeout) {
         
         var vm = this;
 
@@ -12,19 +12,21 @@ loginModule.controller("loginController",
         vm.loginData = LoginService.getUser();
         vm.logout = logout;
         vm.login = login;
+
+        function logout() {
+            vm.loggedIn = false;
+            vm.dataLoading = false;
+        };
+
+        function login() {
+            vm.dataLoading = true;
+            $timeout(function(){
+                vm.loggedIn = true;
+            },1000);
+        };
     }
 );
 
 loginModule.factory("LoginService",
     LoginService
 );
-
-function logout() {
-    this.loggedIn = false;
-    this.dataLoading = false;
-};
-
-function login() {
-    this.dataLoading = true;
-    this.loggedIn = true;
-};
