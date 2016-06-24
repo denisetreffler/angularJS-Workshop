@@ -8,9 +8,9 @@ function LoginService() {
 
     function getUser() {
         return {
-            username: "gClooney",
-            firstname: "George",
-            lastname: "Clooney",
+            username: "JonSnow",
+            firstname: "Jon",
+            lastname: "Snow",
             password: "password",
             id: "0"
         }
