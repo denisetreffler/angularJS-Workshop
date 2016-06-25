@@ -27,6 +27,21 @@ module.exports = function(grunt) {
                         'src/modules/**/*.js'
                     ]
                 }
+            },
+            test: {
+                options: {
+                    compress: false,
+                    mangle: false,
+                    beautify: true
+                },
+                files: {
+                    "public/workshop.js": [
+                        'src/app.js',
+                        'src/app.routes.js',
+                        'src/modules/**/*.js',
+                        'src/helper/**/*.js'
+                    ]
+                }
             }
         },
         copy: {
@@ -63,6 +78,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.registerTask('default', ['sass:all', 'uglify:all', 'copy', 'concat:all', 'bower_concat:all']);
+    grunt.registerTask('default', ['sass:all', 'uglify:test', 'copy', 'concat:all', 'bower_concat:all']);
     grunt.registerTask('dist', ['sass:all', 'uglify:all', 'copy', 'concat:all', 'bower_concat:all']);
 };
