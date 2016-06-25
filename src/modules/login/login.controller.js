@@ -34,16 +34,17 @@ loginModule.controller("loginController",
         function login() {
             vm.dataLoading = true;
             $timeout(function(){
-                LoginService.login(vm.user.username, vm.user.password, function(result) {
-                    if (result === true) {
+                LoginService.login(vm.user.username, vm.user.password)
+                    .then(function successCallback(response){
+                        localStorage.setItem("currentUser", JSON.stringify(response.data.userData));
+                        localStorage.setItem("currentToken", response.data.token);
                         vm.loggedIn = true;
                         vm.error = undefined;
                         vm.loginData = LoginService.getUser();
-                    } else {
+                    },function errorCallback(){
                         vm.error = "Username or password is incorrect";
                         vm.dataLoading = false;
-                    }
-                });
+                    });
             },1000);
         };
     }
