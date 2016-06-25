@@ -24,7 +24,7 @@ function initFakeBackend($httpBackend) {
                 userData: testUser
             }, {}];
         } else {
-            return [200, {}, {}];
+            return [401, {}, {}];
         }
     });
 
