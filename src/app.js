@@ -5,6 +5,7 @@ var workshopApp = angular.module('ec4uWorkshop', [
     "pascalprecht.translate",
     "modules.login",
     "modules.home",
+    "modules.timesheet",
     "ngMockE2E"
 ]);
 

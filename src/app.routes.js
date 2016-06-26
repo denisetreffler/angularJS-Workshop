@@ -16,6 +16,12 @@ workshopApp.config(
                         controller: 'loginController',
                         controllerAs: "ctrl"
                     })
+                    .state('TimeSheet', {
+                        url: '/timesheet',
+                        templateUrl: 'partials/timesheet/timesheet.html',
+                        controller: 'timesheetController',
+                        controllerAs: "ctrl"
+                    })
                     .state('About', {
                         url: '/about',
                         templateUrl: 'partials/about/about.html'
