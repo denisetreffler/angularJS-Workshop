@@ -41,6 +41,8 @@ loginModule.controller("loginController",
                         vm.loggedIn = true;
                         vm.error = undefined;
                         vm.loginData = LoginService.getUser();
+                        var time = response.config.responseTimestamp - response.config.requestTimestamp;
+                        console.log(time / 1000);
                     },function errorCallback(){
                         vm.error = "Username or password is incorrect";
                         vm.dataLoading = false;
