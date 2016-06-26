@@ -24,6 +24,7 @@ module.exports = function(grunt) {
                     "public/workshop.js": [
                         'src/app.js',
                         'src/app.routes.js',
+                        'src/app.translations.js',
                         'src/modules/**/*.js'
                     ]
                 }
@@ -38,6 +39,7 @@ module.exports = function(grunt) {
                     "public/workshop.js": [
                         'src/app.js',
                         'src/app.routes.js',
+                        'src/app.translations.js',
                         'src/modules/**/*.js',
                         'src/helper/**/*.js'
                     ]

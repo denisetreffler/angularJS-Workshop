@@ -15,9 +15,24 @@
                 <span class="header-nav">
                     <nav class="navbar" role="navigation">
                         <ul class="nav nav-pills">
-                            <li class="nav-li"><a ui-sref="Home">Home</a></li>
-                            <li class="nav-li"><a ui-sref="Login">Login</a></li>
-                            <li class="nav-li"><a ui-sref="About">About</a></li>
+                            <li><a ui-sref="Home">{{ 'HOME' | translate }}</a></li>
+                            <li><a ui-sref="Login">{{ 'LOGIN' | translate }}</a></li>
+                            <li><a ui-sref="About">{{ 'ABOUT' | translate }}</a></li>
+                        </ul>
+                    </nav>
+                </span>
+                <span class="header-nav">
+                    <nav class="navbar">
+                        <ul class="nav nav-pills">
+                            <li class="dropdown"><a class="dropdown-toggle"
+                                                    data-toggle="dropdown" role="button"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                {{ 'CHNG_LNG' | translate }}<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a ng-click="changeLanguage('en')">{{ 'LANG_EN' | translate }}</a></li>
+                                    <li><a ng-click="changeLanguage('de')">{{ 'LANG_DE' | translate }}</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </nav>
                 </span>
