@@ -13,7 +13,7 @@
                 <th>Day</th>
                 <th>Comment</th>
             </tr>
-            <tr ng-repeat="entry in ctrl.timesheets">
+            <tr ng-repeat="entry in ctrl.timesheets | filter: {user: ctrl.filterByName}">
                 <td>{{entry.id}}</td>
                 <td>{{entry.project}}</td>
                 <td>{{entry.user}}</td>

@@ -18,8 +18,17 @@ timesheetModule.controller("timesheetController",
         function getAllSheets() {
             TimesheetService.getAll().then(function(response){
                     vm.timesheets = (response.data.timesheet);
+                    vm.filterByName = setFilterCriteria();
             });
         };
+
+        function setFilterCriteria(){
+            var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            if(currentUser != null) {
+                return currentUser.username;
+            }
+            return "empty";
+        }
     }
 );
 
