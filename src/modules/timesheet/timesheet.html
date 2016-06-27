@@ -2,5 +2,27 @@
 
 <div>
     <h1>TimeSheet</h1>
-    <p>Overview page of your working times and projects.</p>
+    <p>Here you can enter and display timesheets and such stuff.</p>
+    <div>
+        <table class="table table-striped">
+            <tr>
+                <th>#</th>
+                <th>Project</th>
+                <th>User</th>
+                <th>Hours</th>
+                <th>Day</th>
+                <th>Comment</th>
+            </tr>
+            <tr ng-repeat="entry in ctrl.timesheets">
+                <td>{{entry.id}}</td>
+                <td>{{entry.project}}</td>
+                <td>{{entry.user}}</td>
+                <td>{{entry.hours}}</td>
+                <td>{{entry.day}}-
+                    {{entry.month}}-
+                    {{entry.year}}</td>
+                <td>{{entry.comment}}</td>
+            </tr>
+        </table>
+    </div>
 </div>

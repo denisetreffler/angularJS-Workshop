@@ -1,18 +1,12 @@
 "use strict";
 
-function TimesheetService() {
+function TimesheetService($http) {
 
     return {
-        day: undefined,
-        hours: undefined,
-        project: undefined,
-        comment: undefined,
-        isRemote: false,
         getAll: getAll
     };
 
     function getAll() {
-        return true;
+        return $http.get('./dummydata/timesheets.json');
     }
-
 };

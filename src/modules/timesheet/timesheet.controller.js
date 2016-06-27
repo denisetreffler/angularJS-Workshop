@@ -8,7 +8,18 @@ timesheetModule.controller("timesheetController",
     function($scope, TimesheetService) {
 
         var vm = this;
-        
+
+        initController();
+
+        function initController(){
+            getAllSheets();
+        };
+
+        function getAllSheets() {
+            TimesheetService.getAll().then(function(response){
+                    vm.timesheets = (response.data.timesheet);
+            });
+        };
     }
 );
 
