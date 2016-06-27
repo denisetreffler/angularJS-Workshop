@@ -5,7 +5,7 @@ var timesheetModule = angular.module("modules.timesheet", [
 ]);
 
 timesheetModule.controller("timesheetController",
-    function($scope, TimesheetService) {
+    function($scope, $timeout, TimesheetService) {
 
         var vm = this;
 
@@ -13,13 +13,17 @@ timesheetModule.controller("timesheetController",
 
         function initController(){
             getAllSheets();
+            getUsers();
+            getProjects();
         };
 
         function getAllSheets() {
-            TimesheetService.getAll().then(function(response){
-                    vm.timesheets = (response.data.timesheet);
-                    vm.filterByName = setFilterCriteria();
-            });
+            $timeout(function(){
+                TimesheetService.getAll().then(function(response){
+                        vm.timesheets = (response.data.timesheet);
+                        vm.filterByName = setFilterCriteria();
+                });
+            },1000);
         };
 
         function setFilterCriteria(){
@@ -28,7 +32,23 @@ timesheetModule.controller("timesheetController",
                 return currentUser.username;
             }
             return "empty";
-        }
+        };
+        
+        function getProjects() {
+            $timeout(function(){
+                TimesheetService.getProjects().then(function(response){
+                    vm.projects = (response.data.project);
+                });
+            },4000);
+        };
+        
+        function getUsers() {
+            $timeout(function(){
+                TimesheetService.getUsers().then(function(response){
+                    vm.users = (response.data.user);
+                });
+            },2000);
+        };
     }
 );
 

@@ -1,0 +1,39 @@
+{
+  "user": [
+    {
+      "id": "0",
+      "username": "JonSnow",
+      "firstname": "Jon",
+      "lastname": "Snow",
+      "password": "password"
+    },
+    {
+      "id": "1",
+      "username": "TL",
+      "firstname": "Tyrion",
+      "lastname": "Lennister",
+      "password": "password"
+    },
+    {
+      "id": "2",
+      "username": "Ari",
+      "firstname": "Arya",
+      "lastname": "Stark",
+      "password": "password"
+    },
+    {
+      "id": "3",
+      "username": "Stinker",
+      "firstname": "Theon",
+      "lastname": "Graufreud",
+      "password": "password"
+    },
+    {
+      "id": "4",
+      "username": "MotherOfDragons",
+      "firstname": "Daenerys",
+      "lastname": "Targaryen",
+      "password": "password"
+    }
+  ]
+}
