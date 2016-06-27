@@ -5,7 +5,7 @@ var loginModule = angular.module("modules.login", [
 ]);
 
 loginModule.controller("loginController",
-    function($scope, LoginService, $timeout) {
+    function($scope, $rootScope, LoginService, $timeout) {
         
         var vm = this;
 
@@ -29,6 +29,7 @@ loginModule.controller("loginController",
             vm.loggedIn = false;
             vm.dataLoading = false;
             LoginService.logout();
+            emitLoginState(false);
         };
 
         function login() {
@@ -41,6 +42,11 @@ loginModule.controller("loginController",
                         vm.loggedIn = true;
                         vm.error = undefined;
                         vm.loginData = LoginService.getUser();
+                        
+                        // inform about success
+                        emitLoginState(true);
+                        
+                        // console output
                         var time = response.config.responseTimestamp - response.config.requestTimestamp;
                         console.log(time / 1000);
                     },function errorCallback(){
@@ -48,6 +54,10 @@ loginModule.controller("loginController",
                         vm.dataLoading = false;
                     });
             },1000);
+        };
+
+        function emitLoginState(loggedIn) {
+            $rootScope.$broadcast("LOGIN_SERVICE_STATE_CHANGED", loggedIn);
         };
     }
 );

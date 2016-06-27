@@ -16,4 +16,13 @@ workshopApp.controller('mainController',
             $scope.changeLanguage = function (key) {
                 $translate.use(key);
             };
+            $scope.$on("LOGIN_SERVICE_STATE_CHANGED",
+                function(event, data){
+                    if (data){
+                        var loggedInUser = JSON.parse(localStorage.getItem("currentUser"));
+                        $scope.loggedInMessage = loggedInUser.firstname.concat(" ").concat(loggedInUser.lastname).concat(": Winter is coming...");
+                    } else {
+                        $scope.loggedInMessage = undefined;
+                    }
+                });
         });
