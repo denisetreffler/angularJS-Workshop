@@ -47,11 +47,20 @@ module.exports = function(grunt) {
             }
         },
         copy: {
-            files: {
-                cwd: 'src/modules',
-                src: '**/*.html',
-                dest: 'public/partials',
-                expand: true
+            all: {
+                files: [
+                    {
+                        cwd: 'src/modules',
+                        src: '**/*.html',
+                        dest: 'public/partials',
+                        expand: true
+                    },
+                    {
+                        cwd: 'src/bower_components/bootstrap/fonts',
+                        src: '*',
+                        dest: 'public/fonts',
+                        expand: true
+                    }]
             }
         },
         concat: {
@@ -80,6 +89,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.registerTask('default', ['sass:all', 'uglify:test', 'copy', 'concat:all', 'bower_concat:all']);
-    grunt.registerTask('dist', ['sass:all', 'uglify:all', 'copy', 'concat:all', 'bower_concat:all']);
+    grunt.registerTask('default', ['sass:all', 'uglify:test', 'copy:all', 'concat:all', 'bower_concat:all']);
+    grunt.registerTask('dist', ['sass:all', 'uglify:all', 'copy:all', 'concat:all', 'bower_concat:all']);
 };
