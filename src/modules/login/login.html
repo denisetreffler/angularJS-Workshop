@@ -46,6 +46,8 @@
         </form>
     </div>
 
-    <div ng-if="ctrl.error" class="alert alert-danger login-form">{{ctrl.error}}</div>
+    <dtv-message msg-type="danger" ng-if="ctrl.error">
+        <span>{{ctrl.error}}</span>
+    </dtv-message>
 
 </div>
