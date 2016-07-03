@@ -21,16 +21,6 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="true" assert-keyword="true" jdk-15="true">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
-  <component name="ValidationConfiguration">
-    <option name="VALIDATORS">
-      <map>
-        <entry key="EJB Validator" value="true" />
-        <entry key="JPA Validator" value="true" />
-        <entry key="Jasper Validator" value="true" />
-        <entry key="Web Xml Validator" value="true" />
-      </map>
-    </option>
-  </component>
   <component name="masterDetails">
     <states>
       <state key="ProjectJDKs.UI">

@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                     beautify: true
                 },
                 files: {
-                    'public/workshop.js': ['app/app.js']
+                    'public/workshop.js': ['src/app.js']
                 }
             }
         },

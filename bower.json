@@ -1,16 +1,30 @@
 {
-  "name": "Swisscom-Workshop",
+  "name": "ec4u-Workshop",
   "version": "0.0.1",
   "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
-    "src/bower_components"
+    "src/bower_components",
+    "bower_components",
+    "test",
+    "tests"
   ],
   "dependencies": {
-    "angular": "*"
+    "angular": "*",
+    "jquery": "^2.2.3"
   },
   "resolutions": {
     "angular": "*"
-  }
+  },
+  "description": "workshop example",
+  "main": "Gruntfile.js",
+  "keywords": [
+    "-"
+  ],
+  "authors": [
+    "Denise"
+  ],
+  "license": "ec4u",
+  "homepage": ""
 }

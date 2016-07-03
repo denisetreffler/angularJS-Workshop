@@ -1,15 +1,16 @@
 {
-  "name": "Swisscom-Workshop",
+  "name": "ec4u-Workshop",
   "version": "0.0.1",
-  "description": "Frontend Technology Workshop for Swisscom",
-  "repository": "https://bitbucket.org/youengineering/swisscom-workshop-2015.git",
+  "description": "Frontend Technology Workshop for ec4u",
+  "repository": "https://bitbucket.org/ec4u/ec4u-workshop.git",
   "main": "Gruntfile.js",
-  "author": "youEngineering AG",
+  "author": "denise",
   "devDependencies": {
     "express": "*",
-    "grunt": "*",
-    "grunt-bower-concat": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-sass": "*"
+    "grunt": "^1.0.1",
+    "grunt-bower-concat": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-postcss": "^0.8.0"
   }
 }
