@@ -2,7 +2,7 @@
   "name": "ec4u-Workshop",
   "version": "0.0.1",
   "description": "Frontend Technology Workshop for ec4u",
-  "repository": "https://bitbucket.org/ec4u/ec4u-workshop.git",
+  "repository": "https://github.com/denisetreffler/angularJS-Workshop.git",
   "main": "Gruntfile.js",
   "author": "denise",
   "devDependencies": {

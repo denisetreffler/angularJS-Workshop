@@ -5,7 +5,5 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="ec4u-workshop node_modules" level="project" />
-    <orderEntry type="library" name="swisscom-workshop-2015 node_modules" level="project" />
-    <orderEntry type="library" name="ec4u-workshop node_modules" level="project" />
   </component>
 </module>
