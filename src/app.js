@@ -5,7 +5,7 @@ var workshopApp = angular.module('ec4uWorkshop',
 
 workshopApp.config(
         function($stateProvider, $urlRouterProvider){
-                $urlRouterProvider.otherwise('/home');
+                $urlRouterProvider.otherwise('home');
 
                 $stateProvider
                     .state('home', {
@@ -13,7 +13,8 @@ workshopApp.config(
                         templateUrl: 'partials/partial-home.html'
                     })
                     .state('about', {
-                        url: '/about'
+                        url: '/about',
+                        // to be done
                     });
         });
 
