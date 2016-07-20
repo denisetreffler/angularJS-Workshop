@@ -18,7 +18,11 @@
                     <div>{{welcomeMessage}}</div>
                 </div>
                 <div ng-controller="ifController as contr">
-                    <div ng-if="contr.obj.booleanValue">{{contr.obj.booleanString}}</div>
+                    <div ng-if="contr.obj.booleanValue">{{contr.obj.booleanString}}
+                        <div ng-repeat="element in contr.obj.valueArray">
+                            <p>{{element}}</p>
+                        </div>
+                    </div>
                 </div>
             </main>
             <footer class="scs-main-footer">ec4u AG</footer>

@@ -12,5 +12,6 @@ angular.module('ec4uWorkshop', [
     .controller('ifController', function () {
         this.obj = {
             booleanValue: true,
-            booleanString: "yes, its true"
+            booleanString: "yes, its true",
+            valueArray : ["value1", "value2", "value3"]
         }});
