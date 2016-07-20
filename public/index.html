@@ -17,6 +17,18 @@
                     <h1 class="scs-heading">{{welcomeTitle}}</h1>
                     <div>{{welcomeMessage}}</div>
                 </div>
+                <div ng-controller="aController">
+                    <p>I am {{name1}}, {{name2}}!</p>
+                    <div ng-controller="bController">
+                        <p>I am {{obj.name1}}, {{obj.name2}}!</p>
+                        <div ng-controller="cController as c">
+                            <p>I am {{c.obj.name1}}, {{c.obj.name2}}!</p>
+                            <div ng-controller="dController">
+                                <p>I am {{obj.name1}}, {{obj.name2}}!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
             <footer class="scs-main-footer">ec4u AG</footer>
         </div>
