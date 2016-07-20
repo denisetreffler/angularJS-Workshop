@@ -12,7 +12,8 @@
   ],
   "dependencies": {
     "angular": "*",
-    "jquery": "^2.2.3"
+    "jquery": "^2.2.3",
+    "angular-ui-router": "*"
   },
   "resolutions": {
     "angular": "*"

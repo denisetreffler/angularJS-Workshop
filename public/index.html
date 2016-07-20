@@ -7,17 +7,27 @@
         <link href="workshop.css" rel="stylesheet" type="text/css" media="screen, print">
     </head>
 
-    <body ng-controller="WelcomeController">
+    <body ng-controller="mainController">
         <div class="scs-main-container">
             <header class="scs-main-header">
-                ec4u Workshop
+                ec4u Workshop - {{welcomeTitle}}
             </header>
+
             <main class="scs-main-body">
-                <div class="ec4u-inlay">
-                    <h1 class="scs-heading">{{welcomeTitle}}</h1>
-                    <div>{{welcomeMessage}}</div>
+                <nav class="navbar navbar-inverse" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="home">Home</a></li>
+                        <li><a ui-sref="about">About</a></li>
+                    </ul>
+                </nav>
+
+                <!-- MAIN CONTENT -->
+                <div class="container">
+                    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+                    <div ui-view></div>
                 </div>
             </main>
+
             <footer class="scs-main-footer">ec4u AG</footer>
         </div>
 

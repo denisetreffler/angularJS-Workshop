@@ -1,11 +1,23 @@
 'use strict';
 
-angular.module('ec4uWorkshop', [
-])
-    
-    
-    .controller('WelcomeController', 
-        ['$scope', function($scope){
-        $scope.welcomeTitle = "Das war's schon";
-        $scope.welcomeMessage = "Bis im Workshop, wir freuen uns!";
-    }]);
+var workshopApp = angular.module('ec4uWorkshop',
+    ["ui.router"]);
+
+workshopApp.config(
+        function($stateProvider, $urlRouterProvider){
+                $urlRouterProvider.otherwise('/home');
+
+                $stateProvider
+                    .state('home', {
+                        url: '/home',
+                        templateUrl: 'partials/partial-home.html'
+                    })
+                    .state('about', {
+                        url: '/about'
+                    });
+        });
+
+workshopApp.controller('mainController',
+        function($scope){
+                $scope.welcomeTitle = "Welcome";
+        });
