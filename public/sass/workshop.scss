@@ -21,8 +21,42 @@ body {
     padding: 15px 20px;
   }
 
+  .navbar {
+    height: 20px;
+    float: right;
+
+    .nav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #dddddd;
+
+      .nav-li {
+        float: left;
+        display: inline;
+
+        a, a:visited, a:link {
+          text-decoration: none;
+          width: 60px;
+          padding: 8px;
+          background-color: #dddddd;
+          color: #111111;
+        }
+
+        a:active, a:hover {
+          text-decoration: none;
+          width: 60px;
+          padding: 8px;
+          background-color: #686868;
+          color: #f6f6f6;
+        }
+      }
+    }
+  }
+
   .scs-main-body {
     margin: 30px 0;
+    min-height: 100px;
 
     .scs-heading {
       &:after {
