@@ -12,6 +12,10 @@ workshopApp.config(
                         url: '/home',
                         templateUrl: 'partials/partial-home.html'
                     })
+                    .state('login', {
+                        url: '/login',
+                        templateUrl: 'partials/partial-login.html'
+                    })
                     .state('about', {
                         url: '/about',
                         templateUrl: 'partials/partial-about.html'
