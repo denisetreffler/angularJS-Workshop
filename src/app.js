@@ -14,7 +14,7 @@ workshopApp.config(
                     })
                     .state('about', {
                         url: '/about',
-                        // to be done
+                        templateUrl: 'partials/partial-about.html'
                     });
         });
 
